@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url("https://i.pinimg.com/564x/e8/d7/54/e8d754c1fbd8e1ffef52f7b4be09c428.jpg");
+    background-size: cover;
+}
+.Vergils{
+    background: darkblue;
+    position: relative;
+    width: 250px;
+    margin-left: 65px;
+    margin-top: 15px;
+    transition: all .3s ease;
+    display: inline-block;
+}
+.Neros{
+    background-color: blue;
+    position: relative;
+    width: 250px;
+    margin-left: 65px;
+    margin-top: 15px;
+    transition: all .3s ease;
+    display: inline-block;
+}
+.Dantes{
+    background-color: brown;
+    position: relative;
+    width: 250px;
+    margin-left: 65px;
+    margin-top: 15px;
+    transition: all .3s ease;
+    display: inline-block;
+}
+
+div img:first-child{
+    width: 100%;
+    box-shadow: 10px 20px 10px -10px black;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+
+.Dante:last-child{
+    opacity: 0;
+    width: 250px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    transform: translateY(25%);
+    margin: auto;
+    filter: drop-shadow(rgb(255, 0, 0) 10px 10px 10px);
+}
+.Nero:last-child{
+    opacity: 0;
+    width: 250px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    transform: translateY(25%);
+    margin: auto;
+    filter: drop-shadow(rgb(23, 33, 94) 10px 10px 10px);
+}
+.Vergil:last-child{
+    opacity: 0;
+    width: 250px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    transform: translateY(25%);
+    margin: auto;
+    filter: drop-shadow(rgb(0, 38, 255) 10px 10px 10px);
+}
+div:hover{
+    transform:
+    perspective(250px)
+    rotateX(10deg)
+    translateX(0)
+    translateY(-5%);
+}
+
+div::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(
+           to bottom,
+           transparent 10% rgba(51,50,50,0.5) rgba(53,53,57) 98%
+    );
+    opacity: 0;
+    transition: all .3s ease;
+    backdrop-filter: blur(1px);
+}
+
+div:hover::before{
+    opacity: 1;
+}
+div:hover img:last-child{
+    opacity: 1;
+}
